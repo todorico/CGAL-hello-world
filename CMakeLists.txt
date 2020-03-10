@@ -92,13 +92,13 @@ target_link_libraries(project_build_options INTERFACE CGAL::CGAL CGAL::CGAL_Qt5)
 # Project Building
 #
 
-add_executable(view src/view.cpp)
+add_executable(hello src/hello.cpp)
 
 if(${CMAKE_VERSION} VERSION_LESS "3.16.4") 
     message(STATUS "CMake cannot precompile headers, please consider using CMake 3.16.4 for faster compilation !")
 else()
     message(STATUS "CMake can precompile headers, compilation will be faster on second run !")
-    target_precompile_headers(view PUBLIC src/cgal_pch.hpp)
+    target_precompile_headers(hello PUBLIC src/cgal_pch.hpp)
 endif()
 
-target_link_libraries(view PRIVATE project_build_options)
+target_link_libraries(hello PRIVATE project_build_options)
