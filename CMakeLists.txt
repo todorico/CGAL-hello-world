@@ -14,7 +14,7 @@ try_enable_ipo(OFF) # Slowdown linking and give better binaries (Unix only)
 
 # Interface for build options (link this with target to set c++ standard / compile-time options etc...)
 add_library(project_build_options INTERFACE)
-target_compile_features(project_build_options INTERFACE cxx_std_11)
+# target_compile_features(project_build_options INTERFACE cxx_std_11)
 
 #
 # Compiler Warnings

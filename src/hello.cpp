@@ -20,6 +20,7 @@ Mesh read_from(std::string filename)
 
 	if(!input_file.is_open())
 	{
+		std::cerr << "Error : cannot open file : " << filename << '\n';
 		exit(EXIT_FAILURE);
 	}
 
@@ -27,17 +28,17 @@ Mesh read_from(std::string filename)
 
 	std::transform(filename.begin(), filename.end(), filename.begin(), ::tolower);
 
-	if(filename.find_last_of(".ply") != std::string::npos)
+	if(filename.find(".ply") != std::string::npos)
 	{
 		read_ply(input_file, mesh);
 	}
-	else if(filename.find_last_of(".off") != std::string::npos)
+	else if(filename.find(".off") != std::string::npos)
 	{
 		read_off(input_file, mesh);
 	}
 	else
 	{
-		std::cerr << "Error : file type is not supported\n";
+		std::cerr << "Error : file extension is not supported\n";
 		exit(EXIT_FAILURE);
 	}
 
