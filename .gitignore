@@ -1,0 +1,37 @@
+# Build directories
+[Bb]in
+[Dd]ebug*/
+[Oo]bj/
+[Bb]uild*/
+[Rr]elease*/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# CMake files
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
+# IDE project files
+*.sublime-project
+*.sublime-workspace
